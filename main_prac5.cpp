@@ -40,6 +40,7 @@ float angME3 = 0.0f;
 float angP1 = 0.0f;
 float angP2 = 0.0f;
 float angP3 = 0.0f;
+float angPedos
 
 
 
