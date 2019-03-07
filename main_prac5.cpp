@@ -15,7 +15,7 @@ p,P: movimiento de el hombro
 O,o: movimiento de codo
 i,I: movimiento de muñeca
 B,b: MOVIMIENTO DE PULGAR*/
-
+/////////////////////////////////////////////////
 #include "Main.h"
 
 float transZ = -5.0f;
