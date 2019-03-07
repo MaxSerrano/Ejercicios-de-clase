@@ -14,7 +14,8 @@ felchas : arriba, abajo angulo  de eje y
 p,P: movimiento de el hombro
 O,o: movimiento de codo
 i,I: movimiento de muñeca
-B,b: MOVIMIENTO DE PULGAR*/
+B,b: MOVIMIENTO DE PULGAR
+Z,z; X,x movimiento indice*/
 /////////////////////////////////////////////////
 #include "Main.h"
 
