@@ -10,13 +10,16 @@ s: atras
 d:izquierda
 a:derecha
 flechas: izquierda y derecha : angulo de eje x
-felchas : arriba, abajo angulo  de eje y 
+felchas : arriba, abajo angulo  de eje y
 p,P: movimiento de el hombro
 O,o: movimiento de codo
 i,I: movimiento de muñeca
 B,b: MOVIMIENTO DE PULGAR
-Z,z; X,x movimiento indice*/
-/////////////////////////////////////////////////
+Z,z: X,x: C,C movimiento  de dedo indice
+K,k:N,n:m,M movimiento de dedo medio
+J,j:h H:g G movimiento  dedo anular
+t T :Y y: U u movimiento dedo meñique*/
+
 #include "Main.h"
 
 float transZ = -5.0f;
@@ -29,18 +32,22 @@ float angHombro = 0.0f;
 float angCodo = 0.0f;
 float angMu = 0.0f;
 float angPul = 0.0f;
+//INdice
 float angIN1 = 0.0f;
 float angIN2 = 0.0f;
 float angIN3 = 0.0f;
+//anular
 float angAN1 = 0.0f;
-float angAN2 = 0.0f; 
+float angAN2 = 0.0f;
 float angAN3 = 0.0f;
+//medio
 float angME1 = 0.0f;
 float angME2 = 0.0f;
 float angME3 = 0.0f;
-float angP1 = 0.0f;
-float angP2 = 0.0f;
-float angP3 = 0.0f;
+//meñique
+float angmq1 = 0.0f;
+float angmq2 = 0.0f;
+float angmq3 = 0.0f;
 
 
 
@@ -188,77 +195,102 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glTranslatef(0, 0, -0.655);
 	glRotatef(angPul, 1, 0, 0);
 	glScalef(0.15, 0.07, 0.3);
-	glColor3f(1,0,0);
-    prisma();
+	glColor3f(1, 0, 0);
+	prisma();
 	glScalef(6.66, 17.28, 3);
 	//indice1
 	glTranslatef(0.5, 0, 1.6);
+	//
+	glRotatef(angIN1, 0, 0, 1);
+	glTranslatef(0, 0, 0);
 	glScalef(0.35, 0.09, 0.6);
 	glColor3f(1, 1, 0);
 	prisma();
 	glScalef(2.85, 11.11, 1.6);
 	//indice2
 	glTranslatef(0.18, 0, 0);
+	//
+	glRotatef(angIN2, 1, 0, 0);
 	glScalef(0.18, 0.09, 0.6);
 	glColor3f(0, 1, 0);
 	prisma();
 	glScalef(5.55, 11.11, 1.6);
 	//indice3
 	glTranslatef(0.15, 0, 0);
+	//
+	glRotatef(angIN2, 1, 0, 0);
 	glScalef(0.15, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
 	glScalef(6.66, 11.11, 1.6);
 	//Medio
-	glTranslatef(-0.28, 0, 1.2);
+	glTranslatef(-0.26, 0, 1.2);
+	//
+	glRotatef(angME1, 1, 0, 0);
 	glScalef(0.35, 0.2, 0.6);
 	glColor3f(1, 1, 0);
 	prisma();
 	glScalef(2.85, 5, 1.66);
 	//medio1
 	glTranslatef(0.18, 0, 0);
+	//
+	glRotatef(angME2, 1, 0, 0);
 	glScalef(0.4, 0.09, 0.6);
 	glColor3f(0, 1, 0);
 	prisma();
 	glScalef(2.5, 11.11, 1.6);
 	//medio2
 	glTranslatef(0.25, 0, 0);
+	//
+	glRotatef(angME3, 1, 0, 0);
 	glScalef(0.15, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
 	glScalef(6.66, 11.11, 1.6);
 	//anular
-	glTranslatef(-0.5, 0, 1.2);
+	glTranslatef(-0.44, 0, 1.2);
+	//
+	glRotatef(angAN1, 1, 0, 0);
 	glScalef(0.35, 0.2, 0.6);
 	glColor3f(1, 1, 0);
 	prisma();
 	glScalef(2.85, 5, 1.66);
 	//anular1
 	glTranslatef(0.18, 0, 0);
+	//
+	glRotatef(angAN2, 1, 0, 0);
 	glScalef(0.28, 0.09, 0.6);
 	glColor3f(0, 1, 0);
 	prisma();
 	glScalef(2.57, 11.11, 1.6);
 	//anular2
-	glTranslatef(0.3, 0, 0);
+	glTranslatef(0.28, 0, 0);
+	//
+	glRotatef(angAN3, 1, 0, 0);
 	glScalef(0.18, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
 	glScalef(5.55, 11.11, 1.6);
 	//meñique
-	glTranslatef(-0.7, 0, 1.2);
+	glTranslatef(-0.6, 0, 1.2);
+	//
+	glRotatef(angmq1, 1, 0, 0);
 	glScalef(0.3, 0.2, 0.6);
 	glColor3f(1, 1, 0);
 	prisma();
 	glScalef(5, 5, 1.66);
 	//meñique1
 	glTranslatef(0.18, 0, 0);
+	//
+	glRotatef(angmq2, 1, 0, 0);
 	glScalef(0.15, 0.09, 0.6);
 	glColor3f(0, 1, 0);
 	prisma();
 	glScalef(2.5, 11.11, 1.6);
 	//meñique2
 	glTranslatef(0.28, 0, 0);
+	//
+	glRotatef(angmq3, 1, 0, 0);
 	glScalef(0.18, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
@@ -347,6 +379,102 @@ void keyboard(unsigned char key, int x, int y)  // Create Keyboard Function
 	case 'B':
 		if (angPul > 0)
 			angPul -= 0.5f;
+		break;
+	case 'z':
+		if (angIN1 < 65)
+			angIN1 += 0.5f;
+		break;
+	case 'Z':
+		if (angIN1 > 0)
+			angIN1 -= 0.5f;
+		break;
+	case 'x':
+		if (angIN2 < 65)
+			angIN2 += 0.5f;
+		break;
+	case 'X':
+		if (angIN2 > 0)
+			angIN2 -= 0.5f;
+		break;
+	case 'c':
+		if (angIN3 < 45)
+			angIN3 += 0.5f;
+		break;
+	case 'C':
+		if (angIN3 > 0)
+			angIN3 -= 0.5f;
+		break;
+	case 'k':
+		if (angME1 < 45)
+			angME1 += 0.5f;
+		break;
+	case 'K':
+		if (angME1 > 0)
+			angME1 -= 0.5f;
+		break;
+	case 'n':
+		if (angME2 < 45)
+			angME2 += 0.5f;
+		break;
+	case 'N':
+		if (angME2 > 0)
+			angME2 -= 0.5f;
+		break;
+	case 'm':
+		if (angME3 < 45)
+			angME3 += 0.5f;
+		break;
+	case 'M':
+		if (angME3 > 0)
+			angME3 -= 0.5f;
+		break;
+	case 'j':
+		if (angAN1 < 45)
+			angAN1 += 0.5f;
+		break;
+	case 'J':
+		if (angAN1 > 0)
+			angAN1 -= 0.5f;
+		break;
+	case 'h':
+		if (angAN2 < 45)
+			angAN2 += 0.5f;
+		break;
+	case 'H':
+		if (angAN2 > 0)
+			angAN2 -= 0.5f;
+		break;
+	case 'g':
+		if (angAN3 < 45)
+			angAN3 += 0.5f;
+		break;
+	case 'G':
+		if (angAN3 > 0)
+			angAN3 -= 0.5f;
+		break;
+	case 't':
+		if (angmq1 < 45)
+			angmq1 += 0.5f;
+		break;
+	case 'T':
+		if (angmq1 > 0)
+			angmq1 -= 0.5f;
+		break;
+	case 'y':
+		if (angmq2 < 45)
+			angmq2 += 0.5f;
+		break;
+	case 'Y':
+		if (angmq2 > 0)
+			angmq2 -= 0.5f;
+		break;
+	case 'u':
+		if (angmq3 < 45)
+			angmq3 += 0.5f;
+		break;
+	case 'U':
+		if (angmq3 > 0)
+			angmq3 -= 0.5f;
 		break;
 	case 27:        // Cuando Esc es presionado...
 		exit(0);   // Salimos del programa
