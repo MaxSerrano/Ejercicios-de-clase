@@ -194,31 +194,37 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//Faltante de pulgar
 	glTranslatef(0, 0, -0.655);
 	glRotatef(angPul, 1, 0, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.15, 0.07, 0.3);
 	glColor3f(1, 0, 0);
 	prisma();
 	glScalef(6.66, 17.28, 3);
+	glTranslatef(0.1, 0, 0);
 	//indice1
 	glTranslatef(0.5, 0, 1.6);
 	//
-	glRotatef(angIN1, 0, 0, 1);
+	glRotatef(angIN1, 0, 1, 0);
 	glTranslatef(0, 0, 0);
 	glScalef(0.35, 0.09, 0.6);
+	glTranslatef(0, 0, 0);
 	glColor3f(1, 1, 0);
 	prisma();
 	glScalef(2.85, 11.11, 1.6);
 	//indice2
 	glTranslatef(0.18, 0, 0);
 	//
-	glRotatef(angIN2, 1, 0, 0);
+	glRotatef(angIN2, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.18, 0.09, 0.6);
+
 	glColor3f(0, 1, 0);
 	prisma();
 	glScalef(5.55, 11.11, 1.6);
 	//indice3
 	glTranslatef(0.15, 0, 0);
 	//
-	glRotatef(angIN2, 1, 0, 0);
+	glRotatef(angIN2, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.15, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
@@ -226,7 +232,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//Medio
 	glTranslatef(-0.26, 0, 1.2);
 	//
-	glRotatef(angME1, 1, 0, 0);
+	glRotatef(angME1, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.35, 0.2, 0.6);
 	glColor3f(1, 1, 0);
 	prisma();
@@ -234,7 +241,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//medio1
 	glTranslatef(0.18, 0, 0);
 	//
-	glRotatef(angME2, 1, 0, 0);
+	glRotatef(angME2, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.4, 0.09, 0.6);
 	glColor3f(0, 1, 0);
 	prisma();
@@ -242,7 +250,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//medio2
 	glTranslatef(0.25, 0, 0);
 	//
-	glRotatef(angME3, 1, 0, 0);
+	glRotatef(angME3, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.15, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
@@ -250,7 +259,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//anular
 	glTranslatef(-0.44, 0, 1.2);
 	//
-	glRotatef(angAN1, 1, 0, 0);
+	glRotatef(angAN1, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.35, 0.2, 0.6);
 	glColor3f(1, 1, 0);
 	prisma();
@@ -258,7 +268,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//anular1
 	glTranslatef(0.18, 0, 0);
 	//
-	glRotatef(angAN2, 1, 0, 0);
+	glRotatef(angAN2, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.28, 0.09, 0.6);
 	glColor3f(0, 1, 0);
 	prisma();
@@ -266,7 +277,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//anular2
 	glTranslatef(0.28, 0, 0);
 	//
-	glRotatef(angAN3, 1, 0, 0);
+	glRotatef(angAN3, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.18, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
@@ -274,7 +286,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//meñique
 	glTranslatef(-0.6, 0, 1.2);
 	//
-	glRotatef(angmq1, 1, 0, 0);
+	glRotatef(angmq1, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.3, 0.2, 0.6);
 	glColor3f(1, 1, 0);
 	prisma();
@@ -282,7 +295,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//meñique1
 	glTranslatef(0.18, 0, 0);
 	//
-	glRotatef(angmq2, 1, 0, 0);
+	glRotatef(angmq2, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.15, 0.09, 0.6);
 	glColor3f(0, 1, 0);
 	prisma();
@@ -290,7 +304,8 @@ void display(void)   // Creamos la funcion donde se dibuja
 	//meñique2
 	glTranslatef(0.28, 0, 0);
 	//
-	glRotatef(angmq3, 1, 0, 0);
+	glRotatef(angmq3, 0, 1, 0);
+	glTranslatef(0, 0, 0);
 	glScalef(0.18, 0.09, 0.6);
 	glColor3f(1, 0, 0);
 	prisma();
